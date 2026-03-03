@@ -9,10 +9,10 @@ See [PRINCIPLES.md](./PRINCIPLES.md) for design principles and conventions.
 | Category | Skills | Description |
 |----------|--------|-------------|
 | **generate/** | 14 | Content & document creation (PDF, DOCX, PPTX, XLSX, design, etc.) |
-| **scaffold/** | 5 | Project scaffolding & templates (FastAPI, MCP server, web artifacts) |
+| **scaffold/** | 4 | Project scaffolding & templates (FastAPI, MCP server, web artifacts) |
 | **develop/** | 4 | Development workflows & tools (git, n8n, uv, product dev) |
 | **check/** | 2 | Testing & validation (webapp testing, product health check) |
-| **track/** | 4 | Project management (Linear CLI, Linear workflow, product planning) |
+| **track/** | 3 | Project management (Linear CLI, Linear workflow, product planning) |
 | **search/** | 4 | Search & research (Twitter, web search, skill discovery) |
 | **transcribe/** | 2 | Audio/video transcription (YouTube, MLX Whisper) |
 | **deploy/** | 1 | Deployment (Cloudflare) |
@@ -43,7 +43,6 @@ See [PRINCIPLES.md](./PRINCIPLES.md) for design principles and conventions.
 - `fastapi-generator` - Scaffold FastAPI projects
 - `mcp-builder` - Build MCP servers
 - `skill-creator` - Create new skills
-- `template` - General project templates
 - `web-artifacts-builder` - Build web artifacts
 
 ### develop/
@@ -57,7 +56,6 @@ See [PRINCIPLES.md](./PRINCIPLES.md) for design principles and conventions.
 - `webapp-testing` - Web application testing
 
 ### track/
-- `linear` - Linear issue tracking
 - `linear-cli` - Linear CLI commands
 - `linear-workflow` - Linear GraphQL API workflow
 - `product-planning` - Product planning
