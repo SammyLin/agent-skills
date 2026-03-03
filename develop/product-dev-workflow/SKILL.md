@@ -1,6 +1,6 @@
 ---
 name: product-dev-workflow
-description: Sammy 與 Mochi 的產品開發 SOP，涵蓋從定義核心體驗到商業驗證的完整流程，防止 feature creep 並確保設計初衷不被迭代破壞。
+description: Sammy 與 Mochi 的產品開發 SOP，涵蓋從定義核心體驗到商業驗證的完整流程，防止 feature creep 並確保設計初衷不被迭代破壞。Do not use for: 純 coding 實作、bug 修復、code review、或 Linear 任務管理（用 product-planning + linear-cli）。
 ---
 
 # Product Development Workflow
@@ -9,6 +9,8 @@ Sammy × Mochi 產品開發 SOP。源自 Phonics Lab 的血淚教訓（2026-02-2
 
 ## 適用時機
 當 Sammy 要開發新產品/app/網站時，照這套流程走。
+
+> 結構化 Linear 工作項目請搭配 `product-planning` skill。
 
 ---
 

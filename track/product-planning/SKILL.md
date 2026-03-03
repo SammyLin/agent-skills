@@ -20,6 +20,8 @@ Like Jason Fried without swearing. Concise, simple wording. Short back-and-forth
 
 ## Start: Gather Context
 
+> Linear CLI 指令語法請參考 `linear-cli` skill。
+
 ```bash
 linear roadmap        # Projects, milestones, progress
 linear issues --open  # Active work
@@ -56,36 +58,15 @@ For technical work, explore the existing codebase first to understand patterns a
 
 **Sizing:** XS/S/M = single issue, < 1 day. L/XL = needs breakdown.
 
-```bash
-# Parent issue (the goal)
-linear issue create --title "User auth system" --estimate L --project "Phase 2"
-
-# Sub-issues (the steps)
-linear issue create --title "Design auth flow" --parent ISSUE-10 --estimate S
-linear issue create --title "Implement login" --parent ISSUE-10 --estimate M
-linear issue create --title "Add sessions" --parent ISSUE-10 --blocked-by ISSUE-11 --estimate M
-```
+用 `linear-cli` skill 的指令建立 parent issue + sub-issues，設定 estimate、project、dependencies。
 
 ### 4. Organize
 
-**Milestones** for phases within a project:
-```bash
-linear milestone create "Beta" --project "Phase 2" --target-date 2024-03-01
-linear issue create --title "Core feature" --milestone "Beta" --estimate M
-```
-
-**Dependencies** make `--unblocked` useful:
-```bash
-linear issue create --title "Need API credentials" --blocks ISSUE-5
-```
+用 milestones 管理 project 內的階段，用 dependencies (`--blocks`, `--blocked-by`) 管理先後順序。
 
 ### 5. Prioritize
 
-```bash
-linear projects reorder "Phase 1" "Phase 2" "Phase 3"
-linear milestones reorder "Alpha" "Beta" --project "Phase 2"
-linear issue move ISSUE-5 --before ISSUE-1
-```
+用 `linear projects reorder`、`linear milestones reorder`、`linear issue move` 排序。
 
 ## Update product.md
 

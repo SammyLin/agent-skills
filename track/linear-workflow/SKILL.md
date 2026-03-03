@@ -5,6 +5,8 @@ description: Linear issue 管理流程。當需要建立、更新或追蹤 Linea
 
 # Linear Workflow
 
+> CLI 指令語法請參考 `linear-cli` skill，本 skill 專注於團隊規則、GraphQL API 用法與連結格式。
+
 ## 團隊使用規則
 
 **OTT Team** - 我們（Sammy + Mochi）的事項
@@ -15,68 +17,14 @@ description: Linear issue 管理流程。當需要建立、更新或追蹤 Linea
 - 連結：https://linear.app/sammylin/team/DECT
 - 用途：只有 Sammy 的個人工作
 
-## 建立 Issue
+## GraphQL API（當 CLI 不適用時）
 
+認證方式：
 ```bash
-curl -s -X POST https://api.linear.app/graphql \
-  -H "Authorization: $(cat ~/.linear | grep api_key | cut -d'=' -f2)" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "mutation { issueCreate(input: { teamId: \"TEAM_ID\", title: \"標題\", description: \"描述\" }) { success issue { id title } } }"
-  }'
+-H "Authorization: $(cat ~/.linear | grep api_key | cut -d'=' -f2)"
 ```
 
-取得 Team ID：
-```bash
-curl -s -X POST https://api.linear.app/graphql \
-  -H "Authorization: $(cat ~/.linear | grep api_key | cut -d'=' -f2)" \
-  -H "Content-Type: application/json" \
-  -d '{"query":"query { teams { nodes { id name key } } }"}'
-```
-
-- 使用上方 GraphQL 查詢取得 Team ID
-
-## 更新 Issue
-
-```bash
-curl -s -X POST https://api.linear.app/graphql \
-  -H "Authorization: $(cat ~/.linear | grep api_key | cut -d'=' -f2)" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "mutation { issueUpdate(id: \"ISSUE_ID\", input: { stateId: \"STATE_ID\" }) { success } }"
-  }'
-```
-
-## 新增 Comment
-
-```bash
-curl -s -X POST https://api.linear.app/graphql \
-  -H "Authorization: $(cat ~/.linear | grep api_key | cut -d'=' -f2)" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "mutation { commentCreate(input: { issueId: \"ISSUE_ID\", body: \"內容\" }) { success } }"
-  }'
-```
-
-## 查詢 Issue
-
-```bash
-curl -s -X POST https://api.linear.app/graphql \
-  -H "Authorization: $(cat ~/.linear | grep api_key | cut -d'=' -f2)" \
-  -H "Content-Type: application/json" \
-  -d '{"query":"query { issue(id: \"ISSUE_ID\") { id title description state { name } assignee { name } } }"}'
-```
-
-## 查詢團隊 Issues
-
-```bash
-curl -s -X POST https://api.linear.app/graphql \
-  -H "Authorization: $(cat ~/.linear | grep api_key | cut -d'=' -f2)" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "query": "query { team(id: \"TEAM_ID\") { issues(first: 10, filter: { state: { name: { eq: \"Backlog\" } } }) { nodes { id title state { name } } } } }"
-  }'
-```
+常用 mutation/query 範例見 [references/graphql-examples.md](references/graphql-examples.md)。
 
 ## 連結格式
 

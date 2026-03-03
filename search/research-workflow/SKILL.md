@@ -41,12 +41,10 @@ agent-browser fill @e3 "text"
 ## 搜尋技巧
 
 ### Twitter/X 搜尋
-永遠用 bird skill：
-```bash
-bird search "關鍵字" -n 10
-bird user-tweets @handle
-```
-認證設定：`~/.config/bird/credentials.json`
+使用 `agent-browser-twitter` skill（已取代 bird CLI）。
+
+### AI 深度搜尋
+使用 `tavily-search` skill，適合需要 AI 優化的深度研究查詢。
 
 ### 一般網頁搜尋
 用 web_search，支援參數：
@@ -71,7 +69,8 @@ bird user-tweets @handle
 | 產品資訊 | web_fetch | Elecrow 產品頁面 |
 | 價格比較 | web_search | "CrowPanel ESP32 price" |
 | 技術文件 | web_fetch | Wiki 文件 |
-| 社群討論 | bird | Twitter 關鍵字 |
+| 社群討論 | agent-browser-twitter | Twitter 關鍵字 |
+| AI 深度研究 | tavily-search | 複雜研究查詢 |
 
 ## 輸出格式
 

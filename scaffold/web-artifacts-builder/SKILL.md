@@ -17,7 +17,7 @@ To build powerful frontend claude.ai artifacts, follow these steps:
 
 ## Design & Style Guidelines
 
-VERY IMPORTANT: To avoid what is often referred to as "AI slop", avoid using excessive centered layouts, purple gradients, uniform rounded corners, and Inter font.
+設計風格請參考 `frontend-design` skill 的指引，避免 AI slop（過多置中、紫色漸層、統一圓角、Inter 字型）。
 
 ## Quick Start
 
