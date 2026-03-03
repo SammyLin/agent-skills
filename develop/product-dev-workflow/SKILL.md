@@ -1,3 +1,8 @@
+---
+name: product-dev-workflow
+description: Sammy 與 Mochi 的產品開發 SOP，涵蓋從定義核心體驗到商業驗證的完整流程，防止 feature creep 並確保設計初衷不被迭代破壞。
+---
+
 # Product Development Workflow
 
 Sammy × Mochi 產品開發 SOP。源自 Phonics Lab 的血淚教訓（2026-02-23）。

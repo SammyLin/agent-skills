@@ -1,6 +1,6 @@
 ---
 name: research-workflow
-description: 網路研究與資訊收集流程。當需要搜尋網路、收集資訊、整理研究結果時使用。根據資料類型選擇最適合的工具：輕量查詢用 web_search，需要網頁內容用 web_fetch，需要操作網頁用 agent-browser 或 browser。
+description: 網路研究與資訊收集流程。當需要搜尋網路、收集資訊、整理研究結果時使用。根據資料類型選擇最適合的工具：輕量查詢用 web_search，需要網頁內容用 web_fetch，需要操作網頁用 agent-browser 或 browser。Do not use for: 本地檔案搜尋、代碼庫搜尋（用 grep/glob）、Twitter 搜尋（用 agent-browser-twitter）、或資料庫查詢。
 ---
 
 # Research Workflow

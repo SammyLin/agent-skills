@@ -1,6 +1,6 @@
 ---
 name: obsidian-workflow
-description: Obsidian 筆記操作流程。當需要與 Obsidian vault 同步、讀取、寫入筆記時使用。我們的 vault 在 iCloud（Mochi-Memory），常用於記憶同步、知識庫存取。
+description: Obsidian 筆記操作流程。當需要與 Obsidian vault 同步、讀取、寫入筆記時使用。我們的 vault 在 iCloud（Mochi-Memory），常用於記憶同步、知識庫存取。Do not use for: 一般檔案讀寫（用 Read/Write 工具）、非 Obsidian 筆記應用、建立新文件（除非要存入 vault）、或搜尋網路資訊。
 ---
 
 # Obsidian Workflow

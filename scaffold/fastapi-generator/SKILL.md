@@ -1,6 +1,6 @@
 ---
 name: fastapi-generator
-description: Generate FastAPI project scaffolding with TailwindCSS and Alpine.js frontend. Use when needing to quickly create a new API service with modern dark-themed UI, CORS support, static files, and example endpoints. Saves ~7k tokens by providing battle-tested boilerplate instead of writing from scratch.
+description: Generate FastAPI project scaffolding with TailwindCSS and Alpine.js frontend. Use when needing to quickly create a new API service with modern dark-themed UI, CORS support, static files, and example endpoints. Saves ~7k tokens by providing battle-tested boilerplate instead of writing from scratch. Do not use for: Django/Flask/Express projects, modifying existing FastAPI apps, frontend-only projects, or MCP server creation (use mcp-builder).
 ---
 
 # FastAPI Project Generator

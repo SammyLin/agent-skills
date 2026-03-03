@@ -1,6 +1,6 @@
 ---
 name: linear-workflow
-description: Linear issue 管理流程。當需要建立、更新或追蹤 Linear issue 時使用，包括：建立新 issue、添加 comment、更新狀態、追蹤任務進度。適用於任何任務管理、工作分配、進度追蹤的場景。
+description: Linear issue 管理流程。當需要建立、更新或追蹤 Linear issue 時使用，包括：建立新 issue、添加 comment、更新狀態、追蹤任務進度。適用於任何任務管理、工作分配、進度追蹤的場景。Do not use for: 產品規劃討論（用 product-planning）、GitHub Issues、Linear CLI 指令參考（用 linear-cli）、或非任務管理的一般查詢。
 ---
 
 # Linear Workflow
@@ -34,8 +34,7 @@ curl -s -X POST https://api.linear.app/graphql \
   -d '{"query":"query { teams { nodes { id name key } } }"}'
 ```
 
-- OTT: `532cea28-6b09-438e-8cd1-6b3e09a50cec`
-- DECT: `96e2e3cf-9cc4-493c-b412-aca151bd843a`
+- 使用上方 GraphQL 查詢取得 Team ID
 
 ## 更新 Issue
 

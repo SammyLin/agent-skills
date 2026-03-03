@@ -1,6 +1,6 @@
 ---
 name: product-planning
-description: Facilitate product thinking and structure work in Linear.
+description: Facilitate product thinking and structure work in Linear. Do not use for: pure code implementation, bug fixing, code review, or Linear CLI commands without product planning context (use linear-cli).
 ---
 
 # Product Planning

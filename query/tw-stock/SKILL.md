@@ -1,6 +1,6 @@
 ---
 name: tw-stock
-description: 查詢台股即時報價、歷史數據。支援 Fugle API（主要）和 Shioaji（備援）兩個資料源互相備援。
+description: 查詢台股即時報價、歷史數據。支援 Fugle API（主要）和 Shioaji（備援）兩個資料源互相備援。Do not use for: 加密貨幣、美股/港股/其他非台灣市場、股票交易下單、技術分析圖表生成、或財務報表分析。
 ---
 
 # 台股查價 Skill

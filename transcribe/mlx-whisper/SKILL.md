@@ -1,6 +1,6 @@
 ---
 name: mlx-whisper
-description: MLX Whisper 本地語音轉文字。用於將音訊檔案轉換為文字（Speech-to-Text），完全在本地執行（Apple Silicon），免費且隱私。當需要離線語音轉文字、不想花 API 費用、或需要快速轉換時使用。
+description: MLX Whisper 本地語音轉文字。用於將音訊檔案轉換為文字（Speech-to-Text），完全在本地執行（Apple Silicon），免費且隱私。當需要離線語音轉文字、不想花 API 費用、或需要快速轉換時使用。Do not use for: 非 Apple Silicon 設備、YouTube 影片轉錄（用 youtube skill）、文字翻譯、即時語音辨識、或文字轉語音（TTS）。
 ---
 
 # MLX Whisper

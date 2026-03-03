@@ -1,6 +1,6 @@
 ---
 name: youtube
-description: Extract and summarize YouTube video content. Use when user provides a YouTube URL and wants transcript, summary, key points, or content analysis. Supports auto-generated and manual subtitles in multiple languages.
+description: Extract and summarize YouTube video content. Use when user provides a YouTube URL and wants transcript, summary, key points, or content analysis. Supports auto-generated and manual subtitles in multiple languages. Do not use for: downloading videos, non-YouTube platforms (Vimeo, Bilibili), local audio/video transcription (use mlx-whisper), or video editing.
 ---
 
 # YouTube Content Extractor

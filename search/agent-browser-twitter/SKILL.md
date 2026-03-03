@@ -1,6 +1,6 @@
 ---
 name: agent-browser-twitter
-description: 用 agent-browser + agentcore profile 搜尋 Twitter/X。當需要搜尋推文、查看用戶、瀏覽 Twitter 時使用。取代 bird CLI，不會被擋。
+description: 用 agent-browser + agentcore profile 搜尋 Twitter/X。當需要搜尋推文、查看用戶、瀏覽 Twitter 時使用。取代 bird CLI，不會被擋。Do not use for: 發推文/回覆、非 Twitter 社群平台（Facebook、Instagram、Reddit）、一般網頁搜尋（用 web_search）、或 Twitter API 直接呼叫。
 ---
 
 # Agent Browser Twitter

@@ -1,6 +1,6 @@
 ---
 name: autocomplete-component
-description: Generate Alpine.js + TailwindCSS autocomplete dropdowns for search inputs. Use when building search features for stocks, cities, products, users, or any searchable data. Supports dark/light themes, API/JSON/static data sources, and customizable fields. Saves ~7k tokens by providing production-ready autocomplete UI instead of writing from scratch each time.
+description: Generate Alpine.js + TailwindCSS autocomplete dropdowns for search inputs. Use when building search features for stocks, cities, products, users, or any searchable data. Supports dark/light themes, API/JSON/static data sources, and customizable fields. Saves ~7k tokens by providing production-ready autocomplete UI instead of writing from scratch each time. Do not use for: React/Vue/Svelte components, full-page search UIs, backend search logic, or non-dropdown UI patterns (tables, lists, filters).
 ---
 
 # Autocomplete Component Generator

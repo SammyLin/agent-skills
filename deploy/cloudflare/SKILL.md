@@ -1,6 +1,6 @@
 ---
 name: cloudflare
-description: Cloudflare 操作工具。當需要管理 Cloudflare Tunnel、R2 CDN、DNS、Pages 部署時使用。包括啟動 tunnel、上傳檔案、部署網站等常見操作。
+description: Cloudflare 操作工具。當需要管理 Cloudflare Tunnel、R2 CDN、DNS、Pages 部署時使用。包括啟動 tunnel、上傳檔案、部署網站等常見操作。Do not use for: AWS/GCP/Azure 部署、Vercel/Netlify 部署、域名購買、SSL 憑證管理（Cloudflare 自動處理）、或應用程式開發本身。
 ---
 
 # Cloudflare 操作
@@ -14,7 +14,7 @@ cloudflared tunnel --config ~/.cloudflared/config.yml run &
 
 ### Tunnel 資訊
 - **Config 路徑**: `~/.cloudflared/config.yml`
-- **Tunnel ID**: `9633347f-d038-454f-8846-31c8a278dca3` (retrolyze)
+- **Tunnel ID**: 見 `~/.cloudflared/config.yml`
 - **文件**: `docs/CLOUDFLARE_TUNNEL_SETUP.md`
 
 ### 快速啟動（對外開放）
@@ -36,9 +36,7 @@ cloudflared tunnel --url http://localhost:PORT
 ### 基本資訊
 - **Bucket**: `cdn-3mi`
 - **域名**: `https://cdn.3mi.tw`
-- **Account**: Sammylintw（ID: `782ea99a9b61fe5dcef072f99d341a85`）
-- **Zone ID (3mi.tw)**: `ee2d92f8725965d599bcd21f1445c15d`
-- **r2.dev URL**: `https://pub-ab149b8ceac54f8db4288e3a3309efcd.r2.dev`
+- **Account/Zone ID**: 見 `~/.cloudflared/credentials.json` 或用 `wrangler whoami` 查詢
 
 ### 上傳指令
 ```bash

@@ -1,6 +1,6 @@
 ---
 name: code-review-workflow
-description: Code review 流程。當需要檢視 PR、處理 review comments、合併分支時使用。基於 GitHub gh CLI 操作，包括檢查 PR 狀態、查看 CI 結果、處理 review 意見、決定是否合併。
+description: Code review 流程。當需要檢視 PR、處理 review comments、合併分支時使用。基於 GitHub gh CLI 操作，包括檢查 PR 狀態、查看 CI 結果、處理 review 意見、決定是否合併。Do not use for: 寫新代碼、建立 PR（用 git commit + gh pr create）、Linear issue 管理、或非 GitHub 平台的 code review。
 ---
 
 # Code Review Workflow

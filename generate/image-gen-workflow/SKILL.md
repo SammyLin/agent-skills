@@ -1,6 +1,6 @@
 ---
 name: image-gen-workflow
-description: AI 圖片生成與發送流程。當需要生成圖片並發送給使用者時使用。支援 nano-banana-pro（Gemini）和 OpenAI 兩種圖片生成服務，生成後自動發送到 Telegram。
+description: AI 圖片生成與發送流程。當需要生成圖片並發送給使用者時使用。支援 nano-banana-pro（Gemini）和 OpenAI 兩種圖片生成服務，生成後自動發送到 Telegram。Do not use for: 圖片編輯/修圖、向量圖設計、截圖、靜態設計作品（用 canvas-design）、或 GIF 動畫（用 slack-gif-creator）。
 ---
 
 # Image Gen Workflow
@@ -33,7 +33,7 @@ read ~/.openclaw/skills/openai-image-gen/SKILL.md
 生成後，使用 message tool 發送到 Telegram：
 
 ```bash
-message action=send to=163411431 media=/path/to/image.jpg caption="圖片描述"
+message action=send to=$TELEGRAM_USER_ID media=/path/to/image.jpg caption="圖片描述"
 ```
 
 ## 發送格式

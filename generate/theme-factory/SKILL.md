@@ -1,6 +1,6 @@
 ---
 name: theme-factory
-description: Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.
+description: Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly. Do not use for: creating content from scratch (use the appropriate generation skill first), brand identity design, or CSS framework selection.
 license: Complete terms in LICENSE.txt
 ---
 
@@ -42,7 +42,7 @@ The following 10 themes are available, each showcased in `theme-showcase.pdf`:
 
 ## Theme Details
 
-Each theme is defined in the `themes/` directory with complete specifications including:
+Each theme is defined in the `assets/` directory with complete specifications including:
 - Cohesive color palette with hex codes
 - Complementary font pairings for headers and body text
 - Distinct visual identity suitable for different contexts and audiences
@@ -50,7 +50,7 @@ Each theme is defined in the `themes/` directory with complete specifications in
 ## Application Process
 
 After a preferred theme is selected:
-1. Read the corresponding theme file from the `themes/` directory
+1. Read the corresponding theme file from the `assets/` directory
 2. Apply the specified colors and fonts consistently throughout the deck
 3. Ensure proper contrast and readability
 4. Maintain the theme's visual identity across all slides

@@ -1,6 +1,6 @@
 ---
 name: tavily
-description: AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents.
+description: AI-optimized web search via Tavily API. Returns concise, relevant results for AI agents. Do not use for: Twitter/social media search, local file search, image search, or when Brave Search (web_search) is sufficient for simple queries.
 homepage: https://tavily.com
 metadata: {"clawdbot":{"emoji":"🔍","requires":{"bins":["node"],"env":["TAVILY_API_KEY"]},"primaryEnv":"TAVILY_API_KEY"}}
 ---

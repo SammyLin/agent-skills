@@ -1,6 +1,6 @@
 ---
 name: linear-cli
-description: Manage Linear issues and projects from the command line. This skill allows automating Linear project management.
+description: Manage Linear issues and projects from the command line. This skill allows automating Linear project management. Do not use for: product planning/strategy discussions (use product-planning), GitHub Issues, Jira, or non-Linear project management tools.
 allowed-tools: Bash(linear:*), Bash(curl:*)
 ---
 
