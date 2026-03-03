@@ -37,3 +37,9 @@ skill-name/
 - Log each skill usage
 - Review usage every 2 days
 - Consider deleting or merging unused skills
+
+## 8. Organize by Action/Function, Not Domain
+- **DO:** Name by what it DOES (twitter-search, stock-query, code-review)
+- **DON'T:** Name by category (search, transcription, finance)
+- Skills often span domains - action-based naming is more intuitive
+- Example: OpenAI organizes as "transcribe", "imagegen", "vercel-deploy"
