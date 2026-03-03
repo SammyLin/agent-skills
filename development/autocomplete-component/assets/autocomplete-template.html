@@ -1,0 +1,114 @@
+<!-- Alpine.js Autocomplete Component -->
+<!-- Theme: THEME | Data Source: DATA_SOURCE -->
+
+<div class="relative" x-data="autocompleteCOMPONENT_ID()">
+    
+    <!-- Input Field -->
+    <label class="block text-sm font-medium mb-1 LABEL_COLOR">LABEL_TEXT</label>
+    <input 
+        type="text" 
+        x-model="query"
+        @input="search($event.target.value)"
+        @focus="showDropdown = true"
+        @blur="hideDropdown"
+        autocomplete="off"
+        placeholder="PLACEHOLDER"
+        class="w-full px-3 py-2 INPUT_BG border INPUT_BORDER rounded-lg focus:ring-2 focus:ring-PRIMARY_COLOR focus:border-transparent outline-none text-sm"
+    >
+    
+    <!-- Autocomplete Dropdown -->
+    <div 
+        x-show="showDropdown && suggestions.length > 0"
+        class="absolute z-50 w-full mt-1 DROPDOWN_BG border DROPDOWN_BORDER rounded-lg shadow-lg max-h-64 overflow-y-auto SCROLLBAR_CLASS">
+        
+        <div 
+            x-for="item in suggestions" 
+            :key="item.ID_FIELD"
+            @mousedown="select(item)"
+            class="px-3 py-2.5 HOVER_BG cursor-pointer border-b ITEM_BORDER last:border-b-0">
+            
+            <div class="flex items-center justify-between">
+                <div class="flex-1">
+                    <div class="text-sm font-medium ITEM_TEXT_COLOR">
+                        <span class="HIGHLIGHT_COLOR" x-text="item.PRIMARY_FIELD"></span>
+                        <span x-text="item.SECONDARY_FIELD"></span>
+                    </div>
+                    <div class="text-xs ITEM_SECONDARY_COLOR mt-0.5" x-text="TERTIARY_TEMPLATE"></div>
+                </div>
+                <div class="text-xs ITEM_META_COLOR" x-text="item.META_FIELD"></div>
+            </div>
+        </div>
+    </div>
+    
+    <p class="text-xs HELP_TEXT_COLOR mt-1">
+        HELP_TEXT
+    </p>
+</div>
+
+<script>
+function autocompleteCOMPONENT_ID() {
+    return {
+        query: '',
+        suggestions: [],
+        showDropdown: false,
+        
+        async search(value) {
+            if (!value || value.length < MIN_SEARCH_LENGTH) {
+                this.suggestions = [];
+                return;
+            }
+            
+            try {
+                SEARCH_LOGIC
+            } catch (error) {
+                console.error('Autocomplete search error:', error);
+                this.suggestions = [];
+            }
+        },
+        
+        select(item) {
+            this.query = item.PRIMARY_FIELD;
+            this.showDropdown = false;
+            
+            // Emit custom event or call callback
+            this.$dispatch('item-selected', item);
+            
+            // Optional: call custom handler
+            if (typeof window.onCOMPONENT_IDSelect === 'function') {
+                window.onCOMPONENT_IDSelect(item);
+            }
+        },
+        
+        hideDropdown() {
+            setTimeout(() => {
+                this.showDropdown = false;
+            }, 200);
+        }
+    }
+}
+</script>
+
+<style>
+/* Custom scrollbar for autocomplete dropdown */
+.SCROLLBAR_CLASS {
+    scrollbar-width: thin;
+    scrollbar-color: SCROLLBAR_THUMB SCROLLBAR_TRACK;
+}
+
+.SCROLLBAR_CLASS::-webkit-scrollbar {
+    width: 6px;
+}
+
+.SCROLLBAR_CLASS::-webkit-scrollbar-track {
+    background: SCROLLBAR_TRACK;
+}
+
+.SCROLLBAR_CLASS::-webkit-scrollbar-thumb {
+    background: SCROLLBAR_THUMB;
+    border-radius: 3px;
+}
+
+.SCROLLBAR_CLASS::-webkit-scrollbar-thumb:hover {
+    background: SCROLLBAR_THUMB_HOVER;
+}
+</style>
